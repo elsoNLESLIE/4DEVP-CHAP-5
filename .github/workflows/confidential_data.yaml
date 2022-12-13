@@ -1,0 +1,11 @@
+on:
+  push:
+  workflow_dispatch:
+env:
+  SUPER_SECRET: CECI_EST_TOP_SECRET
+jobs:
+  display_env:
+   runs-on: ubuntu-latest
+   steps:
+     - name: "Debug infos for deployment"
+       run: echo la valeur de SUPER_SECRET est "${{env.SUPER_SECRET}}"
