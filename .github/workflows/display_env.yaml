@@ -1,0 +1,11 @@
+on:
+  push:
+
+env:
+  MESSAGE: "Ceci est une variable d'environnement ."
+
+jobs:
+  display_env:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "will deploy ${{ env.COMPONENT}} in ${{ env.MESSAGE }}"
