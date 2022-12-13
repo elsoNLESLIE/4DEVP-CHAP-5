@@ -8,4 +8,4 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: "Debug infos for deployment"
-       run: echo la valeur de SUPER_SECRET est "${{env.SUPER_SECRET}}"
+       run: echo la valeur de SUPER_SECRET est "${{secrets.SUPER_SECRET}}" 

@@ -1,0 +1,15 @@
+on:
+  push:
+
+
+jobs:
+  version_python :
+    strategy:
+      matrix:
+        version : ["3.8","3.9","3.10"]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.version }} 
+      - run: echo la valeur de SUPER_SECRET est "${{secrets.SUPER_SECRET}}" 
